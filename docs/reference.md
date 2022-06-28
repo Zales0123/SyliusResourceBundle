@@ -35,6 +35,8 @@ sylius_resource:
 
 ## Routing Generator Configuration Reference
 
+<details open><summary>Yaml</summary>
+
 ```yaml
 app_book:
     resource: |
@@ -52,4 +54,31 @@ app_book:
         serialization_version: 1
     type: sylius.resource
 ```
+
+</details>
+
+<details open><summary>PHP</summary>
+
+```php
+
+#[SyliusCrudRoutes(
+    alias: 'app.book',
+    path: 'library',
+    identifier: 'code',
+    criteria: [
+        'code' => '$code',
+    ],
+    section: 'admin',
+    templates: ':Book',
+    form: SimpleBookType::class,
+    redirect: 'create',
+    except: ['show'],
+    only: ['create', 'index'],
+    serializationVersion: '1',
+)]
+
+```
+
+</details>
+
 **[Go back to the documentation's index](index.md)**
