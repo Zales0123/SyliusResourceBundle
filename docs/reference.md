@@ -1,4 +1,6 @@
-## Configuration Reference
+# Configuration Reference
+
+## Resource Configuration Reference
 
 ```yaml
 sylius_resource:
